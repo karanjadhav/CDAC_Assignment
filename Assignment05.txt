@@ -1,0 +1,17 @@
+#1
+select * from orders where amount > 1000;
+
+#2
+select sname "Name",City from salespeople where city='London' and comm > .10;
+
+#3
+select * from customers where rating > 100 or city='rome';
+
+#4
+Display all tauple from order except date is 03-oct 1990 with cnum >2003 or orders where amt is less then 1000 or Display all order having amount less then 1000 or having order except on 03-oct-1990 with cnum>2003.
+
+#5
+Orders whise orderdate: 1990-10-03 and amount > 1500 will not displayed
+
+#6
+select snum,sname,city,comm from salespeople where comm = .13;
