@@ -4,7 +4,7 @@ CREATE TABLE SEMP (
 EMPNAME char(20),
 BASIC float(9,2),
 DEPTNO char(2), 
-DEPTHEAD char(4),
+DEPTHEAD char(4)
 );
 
 
@@ -14,7 +14,7 @@ DEPTHEAD char(4),
 CREATE TABLE SDEPT
 (
 DEPTNO char(2),
-DEPTNAME char(15),
+DEPTNAME char(15)
 );
  
 
@@ -43,7 +43,7 @@ Insert into SEMP values(
 '0003', 'ALI', 4000, '10', '0001' );
 
 Insert into SEMP values(
-0004, 'GEORGE', 6000, NULL,  '0002',  );
+0004, 'GEORGE', 6000, NULL,  '0002'  );
 
 
 
@@ -80,7 +80,7 @@ Create S, P, J, SPJ tables as specified below and insert a few rows in each tabl
          city varchar(10)
        );
 
- --->      create table spj
+      create table spj
        ( 
         `s#` int(4),
         `p#` int(4),
@@ -88,32 +88,37 @@ Create S, P, J, SPJ tables as specified below and insert a few rows in each tabl
         qty float(7,2)
        ); 
 
-----> insert into s values('1','jack','10','london');
+insert into s values('1','jack','10','london');
 
----->insert into s values('2','seer','30','LA');
+insert into s values('2','seer','30','LA');
 
----->insert into s values('3','ryan','20','bombay');
+insert into s values('3','ryan','20','bombay');
 
----->insert into s values('4','alex','50','budapest');
+insert into s values('4','alex','50','budapest');
 
----->insert into s values('5','steel','40','paris');
+insert into s values('5','steel','40','paris');
 
----->insert into s values('6','max','70','athens');
+insert into s values('6','max','70','athens');
 
----->insert into p values ('101','a','red',13,'bombay');
+insert into p values ('101','a','red',13,'bombay');
 
----->insert into p values ('102','b','black',20,'LA');
+insert into p values ('102','b','black',20,'LA');
 
----->insert into p values ('103','c','blue',10,'london');
+insert into p values ('103','c','blue',10,'london');
 
----->insert into j values ('11','q','paris');
----->insert into j values ('14','s','LA');
----->insert into j values ('15','t','athens');
+insert into j values ('11','q','paris');
 
----->insert into  spj values ('1','102','15','2');
----->insert into  spj values ('2','101','11','6');
----->insert into  spj values ('3','103','14','3');
----->insert into  spj values ('6','102','15','8');
+insert into j values ('14','s','LA');
+
+insert into j values ('15','t','athens');
+
+insert into  spj values ('1','102','15','2');
+
+insert into  spj values ('2','101','11','6');
+
+insert into  spj values ('3','103','14','3');
+
+insert into  spj values ('6','102','15','8');
 
 Write the SELECT queries to do the following:- 
 
