@@ -56,7 +56,7 @@ Insert into SEMP values(
 
 Create S, P, J, SPJ tables as specified below and insert a few rows in each table:- 
 
---->create table s
+create table s
         (
          `s#`int(4),
          Sname varchar(10),
@@ -64,7 +64,7 @@ Create S, P, J, SPJ tables as specified below and insert a few rows in each tabl
          city varchar(10)
         );
 
---->   create table p
+create table p
         (
          `p#` int(4),
           Pname varchar(10),
@@ -73,14 +73,15 @@ Create S, P, J, SPJ tables as specified below and insert a few rows in each tabl
           city varchar(10)
         );
 
- --->     create table j
-       (
-        `j#` int(4),
-         jname varchar(10),
-         city varchar(10)
-       );
+create table j
+      (
+      `j#` int(4),
+       jname varchar(10),
+       city varchar(10)
+      );
 
-      create table spj
+
+create table spj
        ( 
         `s#` int(4),
         `p#` int(4),
