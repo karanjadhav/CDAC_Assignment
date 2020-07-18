@@ -1,0 +1,19 @@
+#1
+select * from orders
+where odate in('1990-10-03','1990-10-04');
+
+#2
+select * from customers
+where snum in(1001,1004);
+
+#3
+select * from customers
+where cname between '@%' and 'H%';
+
+#4
+select * from customers
+where cname like 'C%';
+
+#5
+select * from orders
+where amt>0;
