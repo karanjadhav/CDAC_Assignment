@@ -1,0 +1,29 @@
+#1
+select concat(upper(substr(sname,1,1)),substr(sname,2)) as Sname from s;
+
+#2
+select upper(sname) as Sname from s;
+
+#3
+select lower(sname) as Sname from s;
+
+#4
+select lpad(sname,25,' ') as Sname from s;
+
+#5
+select replace(sname,'la','ro') as Sname from s;
+
+#6
+select replace(replace(sname,'l','r'),'a','o') as Sname from s;
+
+#7
+select sname, length(sname) from s;
+
+#8
+select * from s
+where soundex(sname)=soundex('BLOKE');
+
+#9
+
+
+#10
