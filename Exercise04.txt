@@ -1,0 +1,39 @@
+#1
+select min(status) from s;
+
+#2
+select max(weight) from p;
+
+#3
+select avg(weight) from p;
+
+#4
+select count(pname) Quantity_Sold from p
+where pname='P1';
+
+#5
+select pname, count(pname) from p
+group by pname;
+
+#6
+select avg(qty) from spj
+group by `p#`;
+
+#7
+select `p#`,max(qty) from spj
+where qty>800
+group by `p#`;
+
+#8
+select status, count(sname) from s
+group by status;
+
+#9
+select count(jname), city from j
+group by jname;
+
+#10
+Count(status) will return the number of rows where status is not having NULL value
+Count(*) will return total number of rows.
+
+#11
