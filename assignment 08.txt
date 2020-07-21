@@ -1,0 +1,14 @@
+#1
+select onum, snum, amt*0.12 as comm from orders;
+
+#2
+select city "For the city" ,max(rating) "the highest rating is:" from customers group by city;
+
+#3
+select rating, cname, cnum from customers
+order by rating desc;
+
+#4
+select odate, count(onum) Orders from orders
+group by odate
+order by Orders desc;
