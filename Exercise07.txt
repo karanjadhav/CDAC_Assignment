@@ -1,0 +1,22 @@
+#1
+select count(onum) from orders
+where odate='1990-10-03';
+
+#2
+select count(distinct city) from customers;
+
+#3
+select snum, min(amt) from orders
+group by snum;
+
+#4
+select min(cname) from customers
+where cname>='G';
+
+#5
+select city, max(rating) from customers
+group by city;
+
+#6
+select odate, count(distinct snum) from orders
+group by odate;
