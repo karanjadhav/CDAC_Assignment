@@ -1,0 +1,13 @@
+#1
+select onum, cname from orders, customers
+where customers.cnum = orders.cnum;
+
+#2
+select sname, cname, onum from orders, salespeople, customers
+where orders.snum=salespeople.snum and orders.snum=customers.snum;
+
+#3
+select cname, sname, comm from customers, salespeople
+where customers.snum=salespeople.snum and salespeople.comm>0.12;
+
+#4

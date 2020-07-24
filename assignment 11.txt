@@ -1,0 +1,11 @@
+#1
+select onum, cnum from orders
+where cnum=(select cnum from customers where cname='Cisneros');
+
+#2
+select cname, rating from customers
+where rating>(select avg(rating) from customers); 
+
+#3
+select max(sall) from (select sum(amt) sall from orders
+group by snum) as temp;
