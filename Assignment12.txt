@@ -1,0 +1,23 @@
+#1
+select cname from customers
+where rating >= ANY
+(select rating from customers where snum=
+(select snum from salespeople where sname = 'Serres'));
+
+#2
+select sname from salespeople
+where (snum,salespeople.city) not in
+(select snum, customers.city from customers);
+
+#3
+select * from orders
+where amt>ANY
+(select amt from orders where snum IN
+(select snum from customers where city='London'));
+
+#4
+select * from orders where
+amt > ANY
+(select min(amt) from orders,customers
+where customers.cnum = orders.cnum
+and customers.city = 'London');
