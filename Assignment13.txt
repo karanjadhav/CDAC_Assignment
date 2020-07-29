@@ -1,0 +1,23 @@
+#1
+select cname, city, 'High Rating' Rating from customers
+where rating>200
+union
+select cname, city, 'Low Rating' Rating from customers
+where rating<=200;
+
+#2
+select sname, snum, cname, cnum from salespeople
+join customers using(snum)
+where customers.snum in
+(select snum from customers
+group by snum
+having count(snum)>1)
+order by sname, cname;
+
+#3
+select snum from salespeople
+where city='san jose'
+union
+select distinct snum from orders
+where snum in
+(select snum from orders where odate='1990-10-03');
