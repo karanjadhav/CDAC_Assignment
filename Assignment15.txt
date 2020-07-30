@@ -1,0 +1,13 @@
+#1
+insert into multicust
+select * from salespeople
+where snum in
+(select snum from customers group by snum having count(snum)>1);
+
+#2
+
+
+#3
+update salespeople set comm=comm+(comm*(0.2))
+where snum in  
+(select snum from orders where amt > 3000 group by snum);
