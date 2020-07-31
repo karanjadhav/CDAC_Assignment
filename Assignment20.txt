@@ -1,0 +1,23 @@
+#1
+	#1 -	Yes
+	#2 -	No
+	#3 -	No
+	#4 -	Yes
+
+
+#2
+create view commission as
+select snum,comm from salespeople
+where comm between .10 and .20;
+
+#3
+create table ordersnew 
+(
+onum int(4), 
+amt float(7,2), 
+odate datetime default current_timestamp, 
+cnum int(4),
+snum int (4)
+);
+create view Entryorders as 
+select * from ordersnew;
