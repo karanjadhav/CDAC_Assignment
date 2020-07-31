@@ -1,1 +1,20 @@
 #1
+create view highview as
+select * from customers
+where rating = (select max(rating) from customers);
+
+#2
+create view salespeopleview as
+select city, count(city) as 'Number of Saleseople' from salespeople
+group by city;
+
+#3
+create view avgview as
+select sname, avg(onum) Average, count(onum) Total from salespeople, orders
+where salespeople.snum=orders.snum
+group by sname;
+
+#4
+create view multiview as
+select sname, cname from salespeople, customers
+where salespeople.snum=customers.snum;
