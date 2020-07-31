@@ -1,1 +1,25 @@
 #1
+create table orders1
+(
+onum int(4),
+snum int(4),
+cnum int(4),
+primary key(onum,snum,cnum)
+);
+
+#2
+create table salespeople1
+(
+comm int(3) default 10 not null,
+snum int (4) primary key,
+sname varchar(20) check((substr(sname,1,1)) between 'A' and 'M')	
+);
+
+#3
+create table orders2
+(
+onum int,
+snum int,
+cnum int
+check(onum > cnum and cnum > snum )
+);
