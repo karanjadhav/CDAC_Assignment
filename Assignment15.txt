@@ -5,7 +5,10 @@ where snum in
 (select snum from customers group by snum having count(snum)>1);
 
 #2
-
+delete from customers
+where cnum in
+(select cnum from customers where cnum not in
+(select cnum from orders));
 
 #3
 update salespeople set comm=comm+(comm*(0.2))
